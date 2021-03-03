@@ -3,7 +3,7 @@ Servo bldc;
 
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   bldc.attach(9);
 }
 void loop() {
