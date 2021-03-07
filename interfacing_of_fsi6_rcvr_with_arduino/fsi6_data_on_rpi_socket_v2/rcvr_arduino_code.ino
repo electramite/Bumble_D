@@ -19,26 +19,29 @@ void setup() {
 void loop() {
   if (Serial.available() > 0) {
 
-    String ch1 = Serial.readStringUntil('\n'); 
-    String ch2 = Serial.readStringUntil('\n');
-    String ch3 = Serial.readStringUntil('\n');
-    String ch4 = Serial.readStringUntil('\n');
-    String ch5 = Serial.readStringUntil('\n');
-    String ch6 = Serial.readStringUntil('\n');
+    String ch1 = Serial.readStringUntil('\n');
+    int c = 0;
+
+    int d[6]={0};
+    int x;
+    for(int i=0;i<ch1.length();i++)
+    {
+      if(ch1[i]==' ')
+      {
+        c++;
+      }else
+      {
+        x=ch1[i]-48;
+        d[c]=d[c]*10 +x;
+      }
+    }
     
-    int d1 = ch1.toInt();
-    int d2 = ch2.toInt();
-    int d3 = ch3.toInt();
-    int d4 = ch4.toInt();
-    int d5 = ch5.toInt();
-    int d6 = ch6.toInt();
-    
-    d1 = map(d1, 995, 1990, 0, 180);
-    d2 = map(d2, 995, 1990, 0, 180);
-    d3 = map(d3, 995, 1990, 0, 180);
-    d4 = map(d4, 995, 1990, 0, 180);
-    d5 = map(d5, 995, 1990, 0, 180);
-    d6 = map(d6, 995, 1990, 0, 180);
+    int d1 = map(d[0], 995, 2000, 0, 180);
+    int d2 = map(d[1], 995, 2000, 0, 180);
+    int d3 = map(d[2], 995, 2000, 0, 180);
+    int d4 = map(d[3], 995, 2000, 0, 180);
+    int d5 = map(d[4], 995, 2000, 0, 180);
+    int d6 = map(d[5], 995, 2000, 0, 180);
     
     s1.write(d1);
     s2.write(d2);
@@ -47,5 +50,5 @@ void loop() {
     s5.write(d5);
     s6.write(d6);
         
- }
+  }
 }
