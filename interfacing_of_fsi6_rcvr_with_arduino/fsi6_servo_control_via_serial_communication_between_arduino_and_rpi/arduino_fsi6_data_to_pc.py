@@ -31,10 +31,5 @@ void loop() {
   pwm_value6 = pulseIn(PWM_PIN6, HIGH);
 
   String allData = String(pwm_value1)+" "+String(pwm_value2)+" "+String(pwm_value3)+" "+String(pwm_value4)+" "+String(pwm_value5)+" "+String(pwm_value6);
-#   Serial.println(pwm_value1);
-#   Serial.println(pwm_value2);
-#   Serial.println(pwm_value3);
-#   Serial.println(pwm_value4);
-#   Serial.println(pwm_value5);
-#   Serial.println(pwm_value6);
+
 }
