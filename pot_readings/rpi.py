@@ -3,7 +3,7 @@ import serial
 import time
 import re
 
-ser = serial.Serial('/dev/USB0', 9600, timeout=1)
+ser = serial.Serial('/dev/USB0', 115200, timeout=1)
 ser.flush()
 s = socket.socket()
 host = "127.0.0.1"
