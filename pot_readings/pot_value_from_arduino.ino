@@ -4,7 +4,7 @@ int pot_pin = A0;
 int pot_value;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(11500);
 }
 void loop() {
 
