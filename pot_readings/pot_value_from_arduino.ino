@@ -1,7 +1,7 @@
 
-int pot_pin = A0;
+int pot_pin = A0; // declaring analog pin A0 as pot pin
 
-int pot_value;
+int pot_value; 
 
 void setup() {
   Serial.begin(115200);
